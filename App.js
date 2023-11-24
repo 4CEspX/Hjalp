@@ -6,7 +6,7 @@ export default function App() {
     <View style={styles.container}>
       <Text style={{
         color: 'red',
-      }}>Jonathan har en liten peniiiiiis</Text>
+      }}>Jonathan har en peniiiiiis</Text>
       <StatusBar style="auto" />
     </View>
   );
