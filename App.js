@@ -6,7 +6,7 @@ export default function App() {
     <View style={styles.container}>
       <Text style={{
         color: 'red',
-      }}>Jonathan luktar bajs</Text>
+      }}>Zimon är en liten Hobbit</Text>
       <StatusBar style="auto" />
     </View>
   );
