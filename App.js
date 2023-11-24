@@ -6,7 +6,7 @@ export default function App() {
     <View style={styles.container}>
       <Text style={{
         color: 'red',
-      }}>Open up App.js to start working on your app!!</Text>
+      }}>Jonathan luktar bajs</Text>
       <StatusBar style="auto" />
     </View>
   );
