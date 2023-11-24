@@ -7,7 +7,7 @@ export default function App() {
 
   const handleButtonPress = () => {
     // Change the text when the button is pressed
-    setDisplayText("Text changed on button press!");
+    setDisplayText("jontes peniiiiis är liten!");
   };
 
   return (
