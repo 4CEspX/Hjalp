@@ -22,9 +22,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "black"
       },
-      "userInterfaceStyle": {
         "backgroundColor": "black"
-      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
