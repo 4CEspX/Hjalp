@@ -1,7 +1,15 @@
 {
   "expo": {
     "plugins": [
-      "react-native-nfc-manager"
+      [
+        "react-native-nfc-manager",
+        {
+          "nfcPermission": "Custom permission message",
+          "selectIdentifiers": ["A0000002471001"],
+          "systemCodes": ["8008"],
+          "includeNdefEntitlement": false
+        }
+      ]
     ],
     "name": "my-pp",
     "slug": "my-pp",
@@ -24,7 +32,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0000006"
+        "backgroundColor": "#000000"
       },
       "permissions": [
         "android.permission.NFC"
