@@ -1,7 +1,7 @@
 // AppNavigator.js
 import { createStackNavigator } from 'react-navigation-stack';
 import Scanner from './Scanner';
-import LoginScreen from './Loginscreen';
+import LoginScreen from './LoginScreen';
 
 
 const AppNavigator = createStackNavigator(
@@ -11,7 +11,7 @@ const AppNavigator = createStackNavigator(
     LoginScreen: LoginScreen,
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'LoginScreen',
   }
 );
 
