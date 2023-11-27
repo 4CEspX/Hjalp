@@ -1,30 +1,41 @@
-import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import React from 'react';
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import NfcManager, {NfcTech} from 'react-native-nfc-manager';
 
-export default function App() {
-  const [displayText, setDisplayText] = useState("Jonathan har en peniiiiiis");
+// Pre-step, call this before any NFC operations
+NfcManager.start();
 
-  const handleButtonPress = () => {
-    // Change the text when the button is pressed
-    setDisplayText("jontes peniiiiis är liten!");
-  };
+function App() {
+  async function readNdef() {
+    try {
+      // register for the NFC tag with NDEF in it
+      await NfcManager.requestTechnology(NfcTech.Ndef);
+      // the resolved tag object will contain `ndefMessage` property
+      const tag = await NfcManager.getTag();
+      console.warn('Tag found', tag);
+    } catch (ex) {
+      console.warn('Oops!', ex);
+    } finally {
+      // stop the nfc scanning
+      NfcManager.cancelTechnologyRequest();
+    }
+  }
 
   return (
-    <View style={styles.container}>
-      <Text style={{ color: "red" }}>{displayText}</Text>
-      <Button title="Press Me" onPress={handleButtonPress} />
-      {/* You can change the title and functionality in onPress based on your requirement */}
-      <StatusBar style="auto" />
+    <View style={styles.wrapper}>
+      <TouchableOpacity onPress={readNdef}>
+        <Text>Scan a Tag</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  wrapper: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
+
+export default App;
