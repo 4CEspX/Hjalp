@@ -5,11 +5,16 @@
         "react-native-nfc-manager",
         {
           "nfcPermission": "Custom permission message",
-          "selectIdentifiers": ["A0000002471001"],
-          "systemCodes": ["8008"],
+          "selectIdentifiers": [
+            "A0000002471001"
+          ],
+          "systemCodes": [
+            "8008"
+          ],
           "includeNdefEntitlement": false
         }
-      ]
+      ],
+      "expo-router"
     ],
     "name": "my-pp",
     "slug": "my-pp",
@@ -17,6 +22,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "scheme": "my-pp-scheme",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -40,7 +46,8 @@
       "package": "com.test.mypp"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
     },
     "extra": {
       "eas": {

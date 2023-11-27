@@ -1,12 +1,13 @@
 // App.js
 import React from 'react';
-import { createAppContainer } from 'react-navigation';
-import AppNavigator from './AppNavigator';
 
-const AppContainer = createAppContainer(AppNavigator);
+import LoginScreen from './app/LoginScreen';
+
+
+
 
 const App = () => {
-  return <AppContainer />;
+  return <LoginScreen/>;
 };
 
 export default App;
